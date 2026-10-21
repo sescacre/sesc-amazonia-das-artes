@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sesc Amazônia das Artes 2026</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Sesc Amazônia das Artes — Entre amazônias 2026. Índice da programação de teatro, circo, dança, música, literatura, audiovisual e artes visuais na Amazônia Legal.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,300..900;1,62..125,300..900&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<div class="progresso" id="progresso" aria-hidden="true"></div>
+
+<aside class="lateral" id="lateral">
+  <div class="lateral__topo">
+    <a class="lateral__marca" href="#inicio" aria-label="Sesc Amazônia das Artes — início">
+      <img class="logo-claro" src="assets/img/logo-black.png" alt="" width="672" height="457">
+      <img class="logo-escuro" src="assets/img/logo-white.png" alt="" width="672" height="456">
+    </a>
+    <button class="lateral__abrir" id="abrirMenu" type="button" aria-expanded="false" aria-controls="lateralNav">Menu</button>
+  </div>
+  <nav class="lateral__nav" id="lateralNav" aria-label="Principal">
+    <p class="mono lateral__titulo">Linguagens</p>
+    <ul id="navLinguagens"></ul>
+    <p class="mono lateral__titulo">Página</p>
+    <ul>
+      <li><a href="#sobre">O projeto</a></li>
+      <li><a href="#programacao">Programação</a></li>
+      <li><a href="#circuito">Circuito</a></li>
+    </ul>
+    <p class="mono lateral__nota">Edição 2026<br>Amazônia Legal · 10 estados</p>
+  </nav>
+</aside>
+
+<div class="principal">
+<main id="conteudo">
+
+  <section class="abertura" id="inicio">
+    <p class="mono abertura__olho">Sesc · Amazônia das Artes · Edição 2026</p>
+    <h1 class="manchete" aria-label="Entre amazônias">
+      <span class="palavra" aria-hidden="true"><span class="palavra__in">Entre</span></span>
+      <span class="palavra" aria-hidden="true"><span class="palavra__in">amazônias</span></span>
+    </h1>
+    <div class="abertura__base">
+      <p class="abertura__lead">Uma mostra que circula pela Amazônia Legal com teatro, circo, dança, música, literatura, cinema e artes visuais feitos na própria região.</p>
+      <dl class="dados">
+        <div><dt class="mono">Linguagens</dt><dd id="dLing">7</dd></div>
+        <div><dt class="mono">Estados</dt><dd id="dEst">10</dd></div>
+        <div><dt class="mono">Projetos</dt><dd id="dProj">10</dd></div>
+      </dl>
+    </div>
+    <div class="espectro" id="espectro" aria-hidden="true"></div>
+  </section>
+
+  <section class="bloco sobre" id="sobre">
+    <p class="mono bloco__num">O projeto</p>
+    <div class="sobre__grade">
+      <h2 class="revela">Arte da Amazônia, vista pela própria Amazônia.</h2>
+      <div class="sobre__texto revela">
+        <p>O Sesc Amazônia das Artes é uma rede de circulação entre os Departamentos Regionais do Sesc na região. Cada estado indica trabalhos que já passaram por sua programação, e uma curadoria coletiva escolhe o que vai viajar.</p>
+        <p>Espetáculos, shows, filmes, exposições e encontros literários se apresentam em todos os regionais participantes, acompanhados de oficinas e rodas de conversa entre artistas e público.</p>
+      </div>
+    </div>
+    <ol class="formatos revela">
+      <li><span class="mono">Apresentações</span>Espetáculos, shows e performances</li>
+      <li><span class="mono">Exposições</span>Mostras de artes visuais em circulação</li>
+      <li><span class="mono">Exibições</span>Sessões de filmes e documentários</li>
+      <li><span class="mono">Formação</span>Oficinas, cursos e palestras</li>
+    </ol>
+  </section>
+
+  <section class="bloco programacao" id="programacao">
+    <p class="mono bloco__num">Programação 2026</p>
+    <h2 class="prog__titulo">Índice de projetos</h2>
+    <div class="abas" id="abas" aria-label="Filtrar por linguagem"></div>
+    <div class="ferramentas">
+      <label class="campo" for="filtroEstado"><span class="mono">Estado</span>
+        <select id="filtroEstado"><option value="">Todos</option></select>
+      </label>
+      <label class="campo campo--busca" for="busca"><span class="mono">Buscar</span>
+        <input id="busca" type="search" placeholder="Título ou grupo" autocomplete="off">
+      </label>
+      <p class="mono contagem" id="contagem" aria-live="polite"></p>
+    </div>
+    <p class="aviso" id="avisoExemplo" hidden>As linhas marcadas como exemplo servem só para visualizar o layout. Substitua-as pelos projetos selecionados em <code>js/data.js</code>.</p>
+    <div class="indice__cab mono" aria-hidden="true"><span>Nº</span><span>Título</span><span>Grupo</span><span>Linguagem</span><span>UF</span><span></span></div>
+    <div class="indice" id="indice"></div>
+    <p class="vazio" id="vazio" hidden>Nenhum projeto com esses filtros. <button type="button" class="link" id="limpar">Limpar filtros</button></p>
+  </section>
+
+  <section class="bloco circuito" id="circuito">
+    <p class="mono bloco__num">Circuito</p>
+    <h2 class="revela">Dez estados, uma mostra.</h2>
+    <p class="circuito__desc">Clique em um estado para ver os projetos que ele levou para a mostra.</p>
+    <ul class="estados" id="estados"></ul>
+  </section>
+
+</main>
+
+<footer class="rodape">
+  <div class="rodape__grade">
+    <img class="rodape__logo logo-claro" src="assets/img/logo-black.png" alt="Sesc Amazônia das Artes — Entre amazônias" width="672" height="457" loading="lazy">
+    <img class="rodape__logo logo-escuro" src="assets/img/logo-white.png" alt="Sesc Amazônia das Artes — Entre amazônias" width="672" height="456" loading="lazy">
+    <p>Realização dos Departamentos Regionais do Sesc no Acre, Amapá, Amazonas, Maranhão, Mato Grosso, Pará, Piauí, Rondônia, Roraima e Tocantins.</p>
+    <a class="mono" href="#inicio">Voltar ao topo ↑</a>
+  </div>
+</footer>
+</div>
+
+<div class="espiao" id="espiao" aria-hidden="true"></div>
+
+<dialog class="gaveta" id="gaveta" aria-labelledby="gavetaTitulo">
+  <button class="gaveta__fechar mono" id="fecharGaveta" type="button">Fechar ✕</button>
+  <div class="gaveta__corpo" id="gavetaCorpo"></div>
+</dialog>
+
+<script src="js/data.js"></script>
+<script src="js/base.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

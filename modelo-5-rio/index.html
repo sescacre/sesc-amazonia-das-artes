@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sesc Amazônia das Artes 2026</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Sesc Amazônia das Artes — Entre amazônias 2026. O roteiro da mostra que leva a arte da região de estado em estado.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="topo" id="topo">
+  <div class="wrap topo__linha">
+    <a class="topo__marca" href="#inicio" aria-label="Sesc Amazônia das Artes — início">
+      <img class="logo-claro" src="assets/img/logo-color.png" alt="" width="672" height="457">
+      <img class="logo-escuro" src="assets/img/logo-white.png" alt="" width="672" height="456">
+    </a>
+    <nav class="topo__nav" aria-label="Principal">
+      <a href="#sobre">O projeto</a>
+      <a href="#roteiro">Roteiro</a>
+      <a href="#circuito">Circuito</a>
+    </nav>
+  </div>
+  <div class="chips-barra">
+    <div class="wrap chips" id="chips" aria-label="Filtrar por linguagem"></div>
+  </div>
+</header>
+
+<main id="conteudo">
+
+  <section class="nascente" id="inicio">
+    <canvas class="nascente__agua" id="agua" aria-hidden="true"></canvas>
+    <div class="wrap nascente__conteudo">
+      <h1 class="nascente__logo">
+        <img class="logo-claro" src="assets/img/logo-color.png" alt="Sesc Amazônia das Artes — Entre amazônias" width="672" height="457">
+        <img class="logo-escuro" src="assets/img/logo-white.png" alt="Sesc Amazônia das Artes — Entre amazônias" width="672" height="456">
+      </h1>
+      <p class="nascente__edicao"><em>Edição</em> 2026</p>
+      <p class="nascente__lead">De estado em estado, como as águas que ligam a região, a arte feita na Amazônia encontra o seu público.</p>
+      <a class="botao" href="#roteiro">Seguir o roteiro <span aria-hidden="true">↓</span></a>
+    </div>
+  </section>
+
+  <section class="secao sobre" id="sobre">
+    <div class="wrap sobre__grade">
+      <p class="sobre__frase revela">Uma rede de <em>circulação artística</em> entre os Departamentos Regionais do Sesc na Amazônia Legal.</p>
+      <div class="sobre__texto revela">
+        <p>Cada estado indica trabalhos que já passaram por sua programação, e uma curadoria coletiva escolhe o que vai viajar. Os selecionados se apresentam em todos os regionais participantes.</p>
+        <p>Além das apresentações, a mostra leva exposições, sessões de cinema, oficinas e rodas de conversa entre artistas e público.</p>
+        <ul class="pilulas">
+          <li>Desde <b>2008</b></li><li><b>10</b> estados</li><li><b id="numLing">7</b> linguagens</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao roteiro" id="roteiro">
+    <div class="wrap roteiro__cab">
+      <p class="rotulo">Programação 2026</p>
+      <h2>O roteiro da mostra</h2>
+      <p class="roteiro__desc" id="roteiroDesc">Siga o rio: cada parada é um projeto selecionado para circular pela região.</p>
+      <p class="filtro-estado" id="filtroEstado" hidden></p>
+      <p class="aviso" id="avisoExemplo" hidden>As paradas abaixo são exemplos para visualizar o layout. Substitua-as pelos projetos selecionados em <code>js/data.js</code>.</p>
+    </div>
+    <div class="wrap">
+      <div class="percurso" id="percurso">
+        <svg class="percurso__rio" id="rioSvg" aria-hidden="true"><path class="rio-leito" id="rioLeito"/><path class="rio-agua" id="rioAgua"/></svg>
+        <ol class="paradas" id="paradas"></ol>
+        <p class="vazio" id="vazio" hidden>Nenhuma parada com esse filtro. <button type="button" class="link" id="limpar">Ver todas</button></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao circuito" id="circuito">
+    <div class="wrap">
+      <div class="revela circuito__cab">
+        <p class="rotulo">Circuito</p>
+        <h2>Os portos da mostra</h2>
+        <p>Toque em um estado para ver no roteiro os projetos que ele indicou. O Piauí participa como estado convidado.</p>
+      </div>
+      <ul class="portos" id="portos"></ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="rodape">
+  <svg class="rodape__onda" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30 C 240 0, 480 60, 720 30 S 1200 0, 1440 30 V60 H0Z"/></svg>
+  <div class="wrap rodape__grade">
+    <img class="rodape__logo" src="assets/img/logo-white.png" alt="Sesc Amazônia das Artes — Entre amazônias" width="672" height="456" loading="lazy">
+    <p>Realização dos Departamentos Regionais do Sesc no Acre, Amapá, Amazonas, Maranhão, Mato Grosso, Pará, Piauí, Rondônia, Roraima e Tocantins.</p>
+    <a href="#inicio">Voltar à nascente ↑</a>
+  </div>
+</footer>
+
+<dialog class="modal" id="modal" aria-labelledby="modalTitulo">
+  <div id="modalCorpo"></div>
+  <button class="modal__fechar" id="fecharModal" type="button" aria-label="Fechar">✕</button>
+</dialog>
+
+<script src="js/data.js"></script>
+<script src="js/base.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

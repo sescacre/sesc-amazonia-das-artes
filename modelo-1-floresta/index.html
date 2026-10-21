@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sesc Amazônia das Artes 2026</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Sesc Amazônia das Artes — Entre amazônias 2026. Circulação de teatro, circo, dança, música, literatura, audiovisual e artes visuais pelos estados da Amazônia Legal.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,900&family=Instrument+Sans:wght@400;500;600&family=Quicksand:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="topo" id="topo">
+  <div class="wrap topo__linha">
+    <a class="topo__marca" href="#inicio" aria-label="Sesc Amazônia das Artes — início">
+      <img src="assets/img/logo-white.png" alt="Sesc Amazônia das Artes — Entre amazônias" width="672" height="456">
+    </a>
+    <nav class="topo__nav" id="menu" aria-label="Principal">
+      <a href="#sobre">O projeto</a>
+      <a href="#linguagens">Linguagens</a>
+      <a href="#programacao">Programação</a>
+      <a href="#circuito">Circuito</a>
+    </nav>
+    <button class="topo__abrir" id="abrirMenu" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
+      <span></span><span></span>
+    </button>
+  </div>
+  <!-- Menu de linguagens: gerado a partir de js/data.js -->
+  <nav class="abas" aria-label="Linguagens artísticas">
+    <div class="wrap abas__trilho" id="abas"></div>
+  </nav>
+</header>
+
+<main id="conteudo">
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="inicio">
+    <canvas class="hero__rios" id="rios" aria-hidden="true"></canvas>
+    <div class="wrap hero__grade">
+      <h1 class="hero__logo">
+        <img src="assets/img/logo-white.png" alt="Sesc Amazônia das Artes — Entre amazônias" width="672" height="456">
+      </h1>
+      <div class="hero__texto">
+        <p class="hero__edicao"><span>Edição</span> 2026</p>
+        <p class="hero__lead">A produção artística da Amazônia Legal atravessa rios, estradas e fronteiras para se encontrar no palco, na tela e na galeria.</p>
+        <div class="hero__acoes">
+          <a class="botao botao--claro" href="#programacao">Ver programação</a>
+          <a class="botao botao--linha" href="#sobre">Conheça o projeto</a>
+        </div>
+      </div>
+    </div>
+    <div class="faixa" aria-hidden="true">
+      <div class="faixa__trilho" id="faixa"></div>
+    </div>
+  </section>
+
+  <!-- ===== SOBRE ===== -->
+  <section class="secao sobre" id="sobre">
+    <div class="wrap sobre__grade">
+      <div class="sobre__titulo revela">
+        <p class="rotulo">O projeto</p>
+        <h2>Uma rede de circulação feita <em>entre amazônias</em></h2>
+      </div>
+      <div class="sobre__texto revela">
+        <p>O Sesc Amazônia das Artes leva espetáculos, shows, filmes, exposições e encontros literários de um estado a outro da região amazônica. Cada Departamento Regional do Sesc indica trabalhos que já passaram por sua programação, e uma curadoria coletiva define o que vai circular.</p>
+        <p>A ideia é simples: quem faz arte no Acre precisa ser visto no Amapá, quem cria no Pará precisa chegar a Rondônia. Assim o público conhece a diversidade da própria região, e os artistas trocam experiências, técnicas e processos de criação.</p>
+      </div>
+      <dl class="numeros revela" aria-label="O projeto em números">
+        <div><dt>Primeira edição</dt><dd data-conta="2008">2008</dd></div>
+        <div><dt>Estados no circuito</dt><dd data-conta="10">10</dd></div>
+        <div><dt>Linguagens artísticas</dt><dd data-conta="7" id="numLinguagens">7</dd></div>
+      </dl>
+    </div>
+
+    <div class="wrap formatos revela">
+      <p class="rotulo">O que acontece na mostra</p>
+      <ul class="formatos__lista">
+        <li><strong>Apresentações</strong><span>Espetáculos, shows e performances</span></li>
+        <li><strong>Exposições</strong><span>Mostras de artes visuais que viajam pela região</span></li>
+        <li><strong>Exibições</strong><span>Sessões de filmes e documentários</span></li>
+        <li><strong>Ações formativas</strong><span>Oficinas, cursos e palestras</span></li>
+        <li><strong>Ações mediadas</strong><span>Rodas de conversa entre artistas e público</span></li>
+        <li><strong>Intercâmbio</strong><span>Encontros entre grupos e produtores locais</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== LINGUAGENS ===== -->
+  <section class="secao linguagens" id="linguagens">
+    <div class="wrap">
+      <div class="cabeca revela">
+        <p class="rotulo">Linguagens</p>
+        <h2>Escolha por onde começar</h2>
+      </div>
+      <div class="linguagens__grade" id="gradeLinguagens"></div>
+    </div>
+  </section>
+
+  <!-- ===== PROGRAMAÇÃO ===== -->
+  <section class="secao programacao" id="programacao">
+    <div class="wrap">
+      <div class="cabeca cabeca--linha">
+        <div>
+          <p class="rotulo">Programação 2026</p>
+          <h2 id="tituloProgramacao">Todos os projetos</h2>
+          <p class="cabeca__desc" id="descProgramacao">Trabalhos selecionados pela curadoria para circular pela Amazônia Legal.</p>
+        </div>
+        <div class="filtros">
+          <label class="filtro" for="filtroEstado">
+            <span>Estado</span>
+            <select id="filtroEstado"><option value="">Todos os estados</option></select>
+          </label>
+          <label class="filtro filtro--busca" for="busca">
+            <span>Buscar</span>
+            <input id="busca" type="search" placeholder="Título ou grupo" autocomplete="off">
+          </label>
+        </div>
+      </div>
+
+      <p class="aviso" id="avisoExemplo" hidden>Os projetos abaixo são exemplos para visualizar o layout. Substitua-os pelos selecionados em <code>js/data.js</code>.</p>
+
+      <div class="projetos" id="projetos" aria-live="polite"></div>
+      <p class="vazio" id="vazio" hidden>Nenhum projeto encontrado com esses filtros. <button type="button" class="link" id="limpar">Limpar filtros</button></p>
+    </div>
+  </section>
+
+  <!-- ===== CIRCUITO ===== -->
+  <section class="secao circuito" id="circuito">
+    <div class="wrap">
+      <div class="cabeca revela">
+        <p class="rotulo">Circuito</p>
+        <h2>Dez estados, uma mesma mostra</h2>
+        <p class="cabeca__desc">Os projetos selecionados se apresentam em todos os regionais participantes. O Piauí integra o circuito como estado convidado.</p>
+      </div>
+      <svg class="circuito__rio" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true">
+        <path id="rioCircuito" d="M0 70 C 120 10, 220 110, 340 60 S 560 10, 680 64 S 900 118, 1020 52 S 1150 30, 1200 60"/>
+      </svg>
+      <ol class="estados" id="estados"></ol>
+    </div>
+  </section>
+
+</main>
+
+<footer class="rodape">
+  <div class="wrap rodape__grade">
+    <img class="rodape__logo" src="assets/img/logo-white.png" alt="Sesc Amazônia das Artes — Entre amazônias" width="672" height="456" loading="lazy">
+    <div>
+      <p class="rodape__titulo">Realização</p>
+      <p>Departamentos Regionais do Sesc no Acre, Amapá, Amazonas, Maranhão, Mato Grosso, Pará, Piauí, Rondônia, Roraima e Tocantins.</p>
+    </div>
+    <div>
+      <p class="rodape__titulo">Navegue</p>
+      <ul class="rodape__links" id="rodapeLinks"></ul>
+    </div>
+  </div>
+  <div class="wrap rodape__base">
+    <p>Sesc Amazônia das Artes · Entre amazônias · 2026</p>
+    <a href="#inicio">Voltar ao topo ↑</a>
+  </div>
+</footer>
+
+<!-- Janela de detalhes do projeto -->
+<dialog class="modal" id="modal" aria-labelledby="modalTitulo">
+  <div class="modal__corpo" id="modalCorpo"></div>
+  <button class="modal__fechar" id="fecharModal" aria-label="Fechar">✕</button>
+</dialog>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

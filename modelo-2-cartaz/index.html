@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sesc Amazônia das Artes 2026</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Sesc Amazônia das Artes — Entre amazônias 2026. Teatro, circo, dança, música, literatura, audiovisual e artes visuais em circulação pela Amazônia Legal.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Figtree:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="topo" id="topo">
+  <div class="wrap topo__linha">
+    <a class="topo__marca" href="#inicio" aria-label="Sesc Amazônia das Artes — início">
+      <img class="logo-claro" src="assets/img/logo-color.png" alt="" width="672" height="457">
+      <img class="logo-escuro" src="assets/img/logo-white.png" alt="" width="672" height="456">
+    </a>
+    <!-- Links gerados a partir de js/data.js -->
+    <nav class="topo__nav" id="menu" aria-label="Principal"></nav>
+    <button class="topo__abrir" id="abrirMenu" type="button" aria-expanded="false" aria-controls="menu">
+      <span class="topo__abrir-txt">Menu</span><span class="topo__abrir-ic" aria-hidden="true"><i></i><i></i></span>
+    </button>
+  </div>
+</header>
+
+<main id="conteudo">
+
+  <section class="hero" id="inicio">
+    <div class="wrap hero__grade">
+      <div class="hero__texto">
+        <h1 class="hero__logo">
+          <img class="logo-claro" src="assets/img/logo-color.png" alt="Sesc Amazônia das Artes — Entre amazônias" width="672" height="457">
+          <img class="logo-escuro" src="assets/img/logo-white.png" alt="Sesc Amazônia das Artes — Entre amazônias" width="672" height="456">
+        </h1>
+        <p class="hero__edicao">Edição <strong>2026</strong></p>
+        <p class="hero__lead">Teatro, circo, dança, música, literatura, cinema e artes visuais feitos na Amazônia Legal, em circulação pelos dez estados da região.</p>
+        <div class="hero__acoes">
+          <a class="botao botao--cheio" href="#programacao">Ver programação</a>
+          <a class="botao botao--texto" href="#sobre">Sobre o projeto <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <div class="mosaico" id="mosaico" aria-label="Linguagens artísticas"></div>
+    </div>
+  </section>
+
+  <div class="faixa" aria-hidden="true"><div class="faixa__trilho" id="faixa"></div></div>
+
+  <section class="secao sobre" id="sobre">
+    <div class="wrap sobre__grade">
+      <div class="revela">
+        <p class="rotulo">O projeto</p>
+        <h2>Quem faz arte no Acre precisa ser visto no Amapá.</h2>
+      </div>
+      <div class="sobre__texto revela">
+        <p>O Sesc Amazônia das Artes é uma rede de circulação artística entre os Departamentos Regionais do Sesc na Amazônia Legal. Cada estado indica trabalhos que já passaram por sua programação, e uma curadoria coletiva escolhe o que vai viajar.</p>
+        <p>Os espetáculos, shows, filmes, exposições e encontros literários selecionados se apresentam em todos os regionais participantes, com oficinas e rodas de conversa entre artistas e público.</p>
+      </div>
+    </div>
+    <div class="wrap">
+      <dl class="numeros revela">
+        <div style="--cor:#9B491D"><dt>Primeira edição</dt><dd data-conta="2008">2008</dd></div>
+        <div style="--cor:#466430"><dt>Estados no circuito</dt><dd data-conta="10">10</dd></div>
+        <div style="--cor:#2E5B5E"><dt>Linguagens</dt><dd id="numLinguagens">7</dd></div>
+        <div style="--cor:#A8741C"><dt>Projetos em 2026</dt><dd id="numProjetos">10</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="programacao" id="programacao">
+    <div class="wrap prog__cabeca">
+      <p class="rotulo">Programação 2026</p>
+      <h2>Escolha uma linguagem</h2>
+      <nav class="atalhos" id="atalhos" aria-label="Ir para a linguagem"></nav>
+      <p class="aviso" id="avisoExemplo" hidden>Os cartazes abaixo são exemplos para visualizar o layout. Substitua-os pelos projetos selecionados em <code>js/data.js</code>.</p>
+    </div>
+    <div id="capitulos"></div>
+  </section>
+
+  <section class="secao circuito" id="circuito">
+    <div class="wrap">
+      <div class="revela circuito__cabeca">
+        <p class="rotulo">Circuito</p>
+        <h2>Dez estados, uma mesma mostra</h2>
+        <p>Cada projeto selecionado se apresenta em todos os regionais participantes. O Piauí integra o circuito como estado convidado.</p>
+      </div>
+      <ul class="estados" id="estados"></ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="rodape">
+  <div class="wrap rodape__grade">
+    <img class="rodape__logo" src="assets/img/logo-white.png" alt="Sesc Amazônia das Artes — Entre amazônias" width="672" height="456" loading="lazy">
+    <div>
+      <p class="rodape__titulo">Realização</p>
+      <p>Departamentos Regionais do Sesc no Acre, Amapá, Amazonas, Maranhão, Mato Grosso, Pará, Piauí, Rondônia, Roraima e Tocantins.</p>
+    </div>
+    <div>
+      <p class="rodape__titulo">Linguagens</p>
+      <ul class="rodape__links" id="rodapeLinks"></ul>
+    </div>
+  </div>
+  <div class="wrap rodape__base">
+    <p>Sesc Amazônia das Artes · Entre amazônias · 2026</p>
+    <a href="#inicio">Voltar ao topo ↑</a>
+  </div>
+</footer>
+
+<dialog class="modal" id="modal" aria-labelledby="modalTitulo">
+  <div class="modal__corpo" id="modalCorpo"></div>
+  <button class="modal__fechar" id="fecharModal" type="button" aria-label="Fechar">✕</button>
+</dialog>
+
+<script src="js/data.js"></script>
+<script src="js/base.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

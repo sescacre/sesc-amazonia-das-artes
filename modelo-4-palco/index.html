@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sesc Amazônia das Artes 2026</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Sesc Amazônia das Artes — Entre amazônias 2026. Sete linguagens, dez estados e uma região inteira em cena.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;900&family=Work+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<div class="cortina" id="cortina" aria-hidden="true"><span></span><span></span></div>
+
+<header class="topo" id="topo">
+  <div class="wrap topo__linha">
+    <a class="topo__marca" href="#palco" aria-label="Sesc Amazônia das Artes — início">
+      <img src="assets/img/logo-white.png" alt="" width="672" height="456">
+    </a>
+    <nav class="topo__nav" id="menu" aria-label="Principal"></nav>
+    <button class="topo__abrir" id="abrirMenu" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+  </div>
+</header>
+
+<main id="conteudo">
+
+  <section class="palco" id="palco">
+    <div class="palco__luz" id="luz" aria-hidden="true"></div>
+    <div class="wrap palco__conteudo">
+      <p class="palco__olho">Sesc apresenta · Edição 2026</p>
+      <h1 class="palco__logo"><img src="assets/img/logo-white.png" alt="Sesc Amazônia das Artes — Entre amazônias" width="672" height="456"></h1>
+      <p class="palco__lead">Sete linguagens, dez estados e uma região inteira em cena.</p>
+      <div class="palco__acoes">
+        <a class="botao botao--luz" href="#em-cartaz">Ver o que está em cartaz</a>
+        <a class="botao botao--fio" href="#sobre">Sobre o projeto</a>
+      </div>
+    </div>
+    <div class="palco__chao" aria-hidden="true"></div>
+  </section>
+
+  <section class="sobre" id="sobre">
+    <div class="wrap sobre__grade">
+      <div class="revela">
+        <p class="rotulo">O projeto</p>
+        <h2>Uma mostra que viaja.</h2>
+      </div>
+      <div class="sobre__texto revela">
+        <p>O Sesc Amazônia das Artes é uma rede de circulação entre os Departamentos Regionais do Sesc na Amazônia Legal. Cada estado indica trabalhos que já passaram por sua programação, e uma curadoria coletiva escolhe o que vai circular.</p>
+        <p>Os selecionados se apresentam em todos os regionais participantes, com oficinas, exibições e rodas de conversa entre artistas e público.</p>
+      </div>
+      <dl class="placar revela">
+        <div><dt>Desde</dt><dd data-conta="2008">2008</dd></div>
+        <div><dt>Estados</dt><dd data-conta="10">10</dd></div>
+        <div><dt>Linguagens</dt><dd id="numLing">7</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="em-cartaz" id="em-cartaz">
+    <div class="wrap em-cartaz__cab">
+      <p class="rotulo">Em cartaz</p>
+      <h2>Programação 2026</h2>
+      <p class="aviso" id="avisoExemplo" hidden>Os ingressos abaixo são exemplos para visualizar o layout. Substitua-os pelos projetos selecionados em <code>js/data.js</code>.</p>
+    </div>
+    <div id="paineis"></div>
+  </section>
+
+  <section class="turne" id="circuito">
+    <div class="wrap">
+      <div class="revela">
+        <p class="rotulo">Circuito</p>
+        <h2>A turnê 2026</h2>
+        <p class="turne__desc">Os projetos selecionados se apresentam em todos os regionais. O Piauí participa como estado convidado.</p>
+      </div>
+      <ol class="turne__lista" id="turne"></ol>
+    </div>
+  </section>
+
+</main>
+
+<footer class="rodape">
+  <div class="wrap rodape__grade">
+    <img class="rodape__logo" src="assets/img/logo-white.png" alt="Sesc Amazônia das Artes — Entre amazônias" width="672" height="456" loading="lazy">
+    <p>Realização dos Departamentos Regionais do Sesc no Acre, Amapá, Amazonas, Maranhão, Mato Grosso, Pará, Piauí, Rondônia, Roraima e Tocantins.</p>
+    <a href="#palco">Voltar ao topo ↑</a>
+  </div>
+</footer>
+
+<dialog class="modal" id="modal" aria-labelledby="modalTitulo">
+  <div id="modalCorpo"></div>
+  <button class="modal__fechar" id="fecharModal" type="button" aria-label="Fechar">✕</button>
+</dialog>
+
+<script src="js/data.js"></script>
+<script src="js/base.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
